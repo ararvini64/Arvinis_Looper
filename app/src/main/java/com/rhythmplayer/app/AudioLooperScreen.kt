@@ -273,8 +273,7 @@ fun AudioLooperScreen(audioUri: Uri) {
                 Text("طول لوپ: ${endMs - startMs}ms", color = Color.Yellow, fontSize = 14.sp)
             }
 
-            HorizontalDivider(color = Color.DarkGray)
-
+            Divider(color = Color.DarkGray)
             FineTuneControls(
                 title = "فاین‌تیون نقطه شروع (Start)",
                 color = Color.Green,
