@@ -219,8 +219,8 @@ fun AudioLooperScreen(audioUri: Uri) {
     var isPlaying by remember { mutableStateOf(false) }
     var waveformData by remember { mutableStateOf<List<Float>>(emptyList()) }
 
-    var startMs by remember { mutableLongStateOf(0L) }
-    var endMs by remember { mutableLongStateOf(0L) }
+    var startMs by remember { mutableStateOf(0L) }
+    var endMs by remember { mutableStateOf(0L) }
 
     LaunchedEffect(audioUri) {
         isLoaded = false
@@ -274,6 +274,7 @@ fun AudioLooperScreen(audioUri: Uri) {
             }
 
             Divider(color = Color.DarkGray)
+
             FineTuneControls(
                 title = "فاین‌تیون نقطه شروع (Start)",
                 color = Color.Green,
